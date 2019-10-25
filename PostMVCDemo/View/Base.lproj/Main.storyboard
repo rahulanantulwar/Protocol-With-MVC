@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PostMVCDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzj-mQ-QAZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Lfq-67-J6U"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="NxZ-vD-MOY"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eea-OC-Njl">
+                                <rect key="frame" x="0.0" y="90" width="414" height="806"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postcell" rowHeight="201" id="UZk-eh-91g" customClass="PostViewCell" customModule="PostMVCDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="201"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UZk-eh-91g" id="d7k-om-3LV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPf-gU-Vo4">
+                                                    <rect key="frame" x="3" y="10" width="408" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Rea-8z-oEl"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B2M-H3-WKY">
+                                                    <rect key="frame" x="3" y="43" width="408" height="127"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="87" id="SPF-bm-DNf"/>
+                                                    </constraints>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="B2M-H3-WKY" secondAttribute="trailing" constant="3" id="2h5-Qi-8mp"/>
+                                                <constraint firstItem="B2M-H3-WKY" firstAttribute="leading" secondItem="d7k-om-3LV" secondAttribute="leading" constant="3" id="7Oz-Om-2pV"/>
+                                                <constraint firstItem="QPf-gU-Vo4" firstAttribute="leading" secondItem="d7k-om-3LV" secondAttribute="leading" constant="3" id="CpE-eB-5iw"/>
+                                                <constraint firstItem="B2M-H3-WKY" firstAttribute="top" secondItem="QPf-gU-Vo4" secondAttribute="bottom" constant="12" id="CtB-hj-HVD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="B2M-H3-WKY" secondAttribute="bottom" constant="20" id="atN-nb-2RU"/>
+                                                <constraint firstAttribute="trailing" secondItem="QPf-gU-Vo4" secondAttribute="trailing" constant="3" id="dTE-ef-92u"/>
+                                                <constraint firstItem="QPf-gU-Vo4" firstAttribute="top" secondItem="d7k-om-3LV" secondAttribute="top" constant="10" id="vog-p6-hod"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descLbl" destination="B2M-H3-WKY" id="IsM-rY-nxH"/>
+                                            <outlet property="titleLbl" destination="QPf-gU-Vo4" id="oZa-ch-xF3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="qci-TI-yRV"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="g41-vh-aTD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Eea-OC-Njl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="HBN-p2-Let"/>
+                            <constraint firstItem="Eea-OC-Njl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JHG-L0-kbx"/>
+                            <constraint firstItem="rzj-mQ-QAZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KRO-41-0h9"/>
+                            <constraint firstItem="rzj-mQ-QAZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LJS-b9-MOu"/>
+                            <constraint firstAttribute="bottom" secondItem="Eea-OC-Njl" secondAttribute="bottom" id="NdC-Ch-Ymf"/>
+                            <constraint firstItem="rzj-mQ-QAZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QyX-Ll-o3C"/>
+                            <constraint firstItem="Eea-OC-Njl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RoL-g0-PFT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="postTableView" destination="Eea-OC-Njl" id="CWe-6n-zYN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+</document>
